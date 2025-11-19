@@ -1,0 +1,2 @@
+# Projeto não depende de bibliotecas externas no momento.
+

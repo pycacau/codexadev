@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbitale Store | E-commerce omnichannel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <p>Frete expresso gratis para pedidos acima de R$ 299.</p>
+    </header>
+    <nav class="navbar">
+      <div class="logo">Orbitale</div>
+      <form class="search">
+        <input type="search" placeholder="Buscar produtos" />
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="actions">
+        <button class="ghost">Minha conta</button>
+        <button class="ghost">Pedidos</button>
+        <button class="primary">Carrinho (2)</button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="badge">Nova coleção cápsula</p>
+          <h1>Experiencia omnichannel com estoque unificado.</h1>
+          <p>
+            Loja virtual integrada a marketplaces, PDV e fulfillment em tempo
+            real. Centralize catálogos, preços e promoções com governança.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#colecao">Explorar coleção</a>
+            <a class="btn ghost" href="#painel">Ver painel do lojista</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="halo"></div>
+          <div class="hero-card">
+            <header>
+              <p>Dashboard · tempo real</p>
+              <strong>Resumo do dia</strong>
+            </header>
+            <ul>
+              <li>
+                <span>Pedidos confirmados</span>
+                <strong>312</strong>
+              </li>
+              <li>
+                <span>Ticket medio</span>
+                <strong>R$ 428</strong>
+              </li>
+              <li>
+                <span>Itens em separacao</span>
+                <strong>94</strong>
+              </li>
+            </ul>
+            <footer>
+              <small>Integra com ERP, WMS e apps de loja.</small>
+            </footer>
+          </div>
+          <div class="floating-chip chip-a">
+            <span>+18%</span>
+            Conversão semanal
+          </div>
+          <div class="floating-chip chip-b">
+            <span>4.9</span>
+            Satisfação do cliente
+          </div>
+        </div>
+      </section>
+
+      <section id="colecao" class="section grid">
+        <div>
+          <p class="section-label">Colecao Orbitale+</p>
+          <h2>Produtos gerenciados por tags e clusters.</h2>
+          <p>
+            Variacoes ilimitadas, fotos automatizadas, precificacao dinâmica e
+            campanhas programadas.
+          </p>
+        </div>
+        <div class="cards">
+          <article>
+            <h3>Mochila Nebula</h3>
+            <p>Estofo impermeável · RFID seguro</p>
+            <strong>R$ 499</strong>
+            <button>Adicionar</button>
+          </article>
+          <article>
+            <h3>Fone Eclipse</h3>
+            <p>Bluetooth 5.3 · Cancelamento ativo</p>
+            <strong>R$ 899</strong>
+            <button>Adicionar</button>
+          </article>
+          <article>
+            <h3>Relogio Pulsar</h3>
+            <p>Monitoramento 24/7 · LTE opcional</p>
+            <strong>R$ 1.199</strong>
+            <button>Adicionar</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="painel" class="section highlight">
+        <div class="highlight-copy">
+          <p class="section-label">Painel do lojista</p>
+          <h2>Administre campanhas, estoque e fulfillment.</h2>
+          <ul>
+            <li>OMS com priorizacao por SLA, CEP e margem.</li>
+            <li>Workflow de aprovacao de preco e promocao.</li>
+            <li>Integração nativa com hubs de marketplace.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="panel-grid">
+            <div class="panel-layer layer-1"></div>
+            <div class="panel-layer layer-2"></div>
+          </div>
+          <header>
+            <strong>Fluxo de pedidos</strong>
+            <span>Atualizado ha 3 min</span>
+          </header>
+          <div class="panel-body">
+            <div>
+              <p>Marketplace</p>
+              <strong>152</strong>
+              <small>+18% vs ontem</small>
+            </div>
+            <div>
+              <p>E-commerce proprio</p>
+              <strong>104</strong>
+              <small>+9%</small>
+            </div>
+            <div>
+              <p>Loja física</p>
+              <strong>56</strong>
+              <small>+4%</small>
+            </div>
+          </div>
+          <footer>
+            <button class="ghost">Exportar CSV</button>
+            <button class="primary">Ver detalhes</button>
+          </footer>
+        </div>
+      </section>
+
+      <section class="section trust">
+        <p class="section-label">Integrações</p>
+        <h2>Conecta com gateways, ERPs e logística inteligente.</h2>
+        <div class="logos">
+          <span>Stripe</span>
+          <span>Mercado Pago</span>
+          <span>Bling</span>
+          <span>Tiny</span>
+          <span>Intelipost</span>
+          <span>Hub2B</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contato">
+      <div>
+        <h3>Orbitale Store</h3>
+        <p>Av. Reboucas, 1100 · Sao Paulo</p>
+      </div>
+      <form class="newsletter">
+        <label for="email">Receba novidades</label>
+        <div class="field">
+          <input id="email" type="email" placeholder="email@empresa.com" />
+          <button type="submit">Assinar</button>
+        </div>
+      </form>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
