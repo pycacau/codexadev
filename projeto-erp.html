@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão ERP - Codexa</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo-favicon.png">
+    <link rel="shortcut icon" type="image/png" href="logo-favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo-favicon.png">
+    <link rel="icon" type="image/png" href="logo-favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo-container">
+                <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                    <img src="logo-favicon.png" alt="Codexa Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <svg class="logo logo-fallback" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#FF1744;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#9C27B0;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <path d="M 40 50 C 40 30, 60 30, 70 40 C 80 30, 100 30, 100 50 C 100 70, 80 70, 70 60 C 60 70, 40 70, 40 50 Z M 100 50 C 100 30, 120 30, 130 40 C 140 30, 160 30, 160 50 C 160 70, 140 70, 130 60 C 120 70, 100 70, 100 50 Z" fill="url(#logoGradient)" filter="url(#glow)"/>
+                        <path d="M 70 50 Q 100 50 130 50" fill="none" stroke="url(#logoGradient)" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
+                    </svg>
+                    <span class="logo-text">CODEXA</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Início</a></li>
+                <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="index.html#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="index.html#orcamento" class="nav-link">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <a href="index.html#projetos" class="btn btn-secondary" style="margin-bottom: 2rem; display: inline-block;">← Voltar para Projetos</a>
+                
+                <div class="section-header" style="text-align: left; margin-bottom: 3rem;">
+                    <h1 class="section-title" style="text-align: left;">Sistema de Gestão ERP</h1>
+                    <p class="section-subtitle" style="text-align: left;">Plataforma completa de gestão empresarial com módulos de vendas, estoque e financeiro.</p>
+                </div>
+
+                <div class="projeto-tags" style="margin-bottom: 3rem;">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">API REST</span>
+                </div>
+
+                <div style="margin-bottom: 3rem; border-radius: 20px; overflow: hidden; background: var(--color-dark-secondary); padding: 2rem;">
+                    <h2 style="margin-bottom: 1.5rem; font-size: 1.75rem;">Demonstração do Projeto</h2>
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: var(--color-dark);">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--color-gray); font-size: 0.875rem;">* Substitua o link do YouTube pelo vídeo real do seu projeto</p>
+                </div>
+
+                <div style="background: var(--color-dark-secondary); padding: 3rem; border-radius: 20px; margin-bottom: 3rem;">
+                    <h2 style="margin-bottom: 1.5rem; font-size: 1.75rem;">Sobre o Projeto</h2>
+                    <p style="color: var(--color-gray); line-height: 1.8; margin-bottom: 1.5rem;">
+                        Sistema ERP completo desenvolvido para otimizar processos empresariais, integrando vendas, estoque e gestão financeira em uma única plataforma.
+                    </p>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">Módulos Principais:</h3>
+                    <ul style="color: var(--color-gray); line-height: 2; padding-left: 1.5rem;">
+                        <li>Gestão de Vendas e Pedidos</li>
+                        <li>Controle de Estoque em tempo real</li>
+                        <li>Módulo Financeiro completo</li>
+                        <li>Relatórios e Dashboards analíticos</li>
+                        <li>Gestão de Clientes e Fornecedores</li>
+                        <li>API REST para integrações</li>
+                    </ul>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">Tecnologias Utilizadas:</h3>
+                    <p style="color: var(--color-gray); line-height: 1.8;">
+                        Node.js, PostgreSQL, Express.js, React, TypeScript, e arquitetura de microserviços.
+                    </p>
+                </div>
+
+                <div style="text-align: center; padding: 3rem; background: var(--gradient-primary); border-radius: 20px;">
+                    <h2 style="margin-bottom: 1rem; font-size: 1.75rem;">Visite o Site</h2>
+                    <p style="margin-bottom: 2rem; opacity: 0.9;">Confira o projeto em funcionamento</p>
+                    <a href="https://exemplo.com" target="_blank" class="btn btn-secondary" style="background: var(--color-light); color: var(--color-dark); border: none;">
+                        Acessar Site do Projeto →
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">* Substitua o link pelo URL real do projeto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <img src="logo-favicon.png" alt="Codexa Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="logo-text">CODEXA</span>
+                    </div>
+                    <p>Transformando ideias em soluções digitais de alta qualidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#servicos">Serviços</a></li>
+                        <li><a href="index.html#projetos">Projetos</a></li>
+                        <li><a href="index.html#orcamento">Orçamento</a></li>
+                        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:codexa.service@gmail.com">Email: codexa.service@gmail.com</a></li>
+                        <li><a href="https://wa.me/558597555271" target="_blank">WhatsApp: +55 85 9755-5271</a></li>
+                        <li><a href="https://instagram.com/codexadev" target="_blank">Instagram: @codexadev</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Codexa. Todos os direitos reservados. | <a href="termos-de-uso.html" style="color: var(--color-gray); text-decoration: none;">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

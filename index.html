@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codexa Developer</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo-favicon.png">
+    <link rel="shortcut icon" type="image/png" href="logo-favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo-favicon.png">
+    <link rel="icon" type="image/png" href="logo-favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navegação -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo-container">
+                <img src="logo-favicon.png" alt="Codexa Logo" class="logo-img" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <svg class="logo logo-fallback" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FF1744;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#9C27B0;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Símbolo de infinito com efeito de fita contínua -->
+                    <path d="M 40 50 
+                             C 40 30, 60 30, 70 40
+                             C 80 30, 100 30, 100 50
+                             C 100 70, 80 70, 70 60
+                             C 60 70, 40 70, 40 50 Z
+                             M 100 50
+                             C 100 30, 120 30, 130 40
+                             C 140 30, 160 30, 160 50
+                             C 160 70, 140 70, 130 60
+                             C 120 70, 100 70, 100 50 Z" 
+                          fill="url(#logoGradient)" 
+                          filter="url(#glow)"/>
+                    <!-- Linha de conexão central para efeito de fita -->
+                    <path d="M 70 50 Q 100 50 130 50" 
+                          fill="none"
+                          stroke="url(#logoGradient)" 
+                          stroke-width="6" 
+                          stroke-linecap="round"
+                          filter="url(#glow)"/>
+                </svg>
+                <span class="logo-text">CODEXA</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#orcamento" class="nav-link">Orçamento</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content container">
+            <h1 class="hero-title">
+                Transformamos suas <span class="gradient-text">ideias</span> em
+                <span class="gradient-text">soluções digitais</span>
+            </h1>
+            <p class="hero-subtitle">
+                Desenvolvimento de sites e sistemas personalizados com tecnologia de ponta
+            </p>
+            <div class="hero-buttons">
+                <a href="#orcamento" class="btn btn-primary">Solicitar Orçamento</a>
+                <a href="#projetos" class="btn btn-secondary">Ver Projetos</a>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="servicos section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos <span class="gradient-text">Serviços</span></h2>
+                <p class="section-subtitle">Soluções completas para sua presença digital</p>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Anterior" onclick="moveCarousel('servicos', -1)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="carousel-container" id="servicosCarousel">
+                    <div class="carousel-track" id="servicosTrack">
+                        <!-- Serviço 1: Desenvolvimento de Sites -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3>💻 Desenvolvimento de Sites</h3>
+                            <p>Site Institucional Simples, Avançado ou Premium Personalizado. Soluções completas para sua presença digital.</p>
+                            <ul class="servico-features">
+                                <li>Site Institucional (Simples/Avançado/Premium)</li>
+                                <li>Design exclusivo e responsivo</li>
+                                <li>SEO e otimizações</li>
+                                <li>Painel administrativo</li>
+                                <li>Animações modernas</li>
+                            </ul>
+                        </div>
+                        <!-- Serviço 2: E-commerce -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                            </div>
+                            <h3>🛒 E-commerce (Loja Virtual)</h3>
+                            <p>Loja virtual completa com pagamentos, frete automático e painel de gerenciamento profissional.</p>
+                            <ul class="servico-features">
+                                <li>Até 30 produtos</li>
+                                <li>Pagamentos (Pix, Cartão, Boleto)</li>
+                                <li>Frete automático</li>
+                                <li>Sistema de cupons</li>
+                                <li>Painel completo</li>
+                            </ul>
+                        </div>
+                        <!-- Serviço 3: Sistemas Privados -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h3>🛠️ Sistemas Privados & Soluções Internas</h3>
+                            <p>Sistemas personalizados criados do zero para automatizar processos do seu negócio.</p>
+                            <ul class="servico-features">
+                                <li>Controle de estoque e financeiro</li>
+                                <li>Sistema de agendamentos</li>
+                                <li>Área de clientes</li>
+                                <li>Automação de processos</li>
+                                <li>Relatórios inteligentes</li>
+                            </ul>
+                        </div>
+                        <!-- Serviço 4: Manutenção Web -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5"></path>
+                                    <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <h3>📝 Manutenção Web Mensal</h3>
+                            <p>Mantenha seu site funcionando perfeitamente sem dores de cabeça. Suporte contínuo e atualizações.</p>
+                            <ul class="servico-features">
+                                <li>Atualizações e correções</li>
+                                <li>Monitoramento do site</li>
+                                <li>Suporte direto</li>
+                                <li>Segurança contínua</li>
+                                <li>Ajustes simples</li>
+                            </ul>
+                        </div>
+                        <!-- Serviço 5: Cardápios Digitais -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </div>
+                            <h3>📱 Cardápios Digitais</h3>
+                            <p>Cardápio digital moderno para restaurantes, bares e deliverys. Atualização fácil e integração com pedidos.</p>
+                            <ul class="servico-features">
+                                <li>Página digital responsiva</li>
+                                <li>Organização por categorias</li>
+                                <li>Atualização fácil</li>
+                                <li>Link para pedidos</li>
+                                <li>Layout moderno</li>
+                            </ul>
+                        </div>
+                        <!-- Serviço 6: Identidade Visual -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <h3>🎨 Identidade Visual e Design</h3>
+                            <p>Fortalecça sua marca com visual profissional. Logo, cores, tipografia e manual da marca completo.</p>
+                            <ul class="servico-features">
+                                <li>Logo profissional</li>
+                                <li>Cores e tipografia</li>
+                                <li>Style guide</li>
+                                <li>Manual da marca</li>
+                                <li>Artes para redes sociais</li>
+                            </ul>
+                        </div>
+                        <!-- Serviço 7: Consultoria -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20h9"></path>
+                                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                                </svg>
+                            </div>
+                            <h3>📈 Consultoria e Estratégia Digital</h3>
+                            <p>Orientação profissional para crescer no digital. Análise, diagnóstico e plano estratégico personalizado.</p>
+                            <ul class="servico-features">
+                                <li>Análise de presença online</li>
+                                <li>Diagnóstico profissional</li>
+                                <li>Plano estratégico</li>
+                                <li>Sugestões de melhorias</li>
+                                <li>Orientação personalizada</li>
+                            </ul>
+                        </div>
+                        <!-- Serviço 8: Extras e Add-ons -->
+                        <div class="servico-card">
+                            <div class="servico-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <h3>🚀 Extras e Add-ons</h3>
+                            <p>Funcionalidades extras para potencializar seu projeto. Integrações, automações e otimizações avançadas.</p>
+                            <ul class="servico-features">
+                                <li>Chatbot integrado</li>
+                                <li>Landing pages</li>
+                                <li>Automação de mensagens</li>
+                                <li>SEO avançado</li>
+                                <li>Área de membros</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" aria-label="Próximo" onclick="moveCarousel('servicos', 1)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                <div class="carousel-dots" id="servicosDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos" class="projetos section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos <span class="gradient-text">Projetos</span></h2>
+                <p class="section-subtitle">Conheça alguns dos projetos que desenvolvemos</p>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Anterior" onclick="moveCarousel('projetos', -1)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="carousel-container" id="projetosCarousel">
+                    <div class="carousel-track" id="projetosTrack">
+                        <div class="projeto-card">
+                    <div class="projeto-image">
+                        <div class="projeto-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Site Institucional Moderno</h3>
+                        <p>Desenvolvimento de site corporativo com design moderno e responsivo para empresa de tecnologia.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Responsivo</span>
+                        </div>
+                        <a href="projeto-site-institucional.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <div class="projeto-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Sistema de Gestão ERP</h3>
+                        <p>Plataforma completa de gestão empresarial com módulos de vendas, estoque e financeiro.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">API REST</span>
+                        </div>
+                        <a href="projeto-erp.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <div class="projeto-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <h3>E-commerce Completo</h3>
+                        <p>Loja virtual com integração de pagamentos, gestão de produtos e painel administrativo.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                        <a href="projeto-ecommerce.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <div class="projeto-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="projeto-content">
+                        <h3>Plataforma SaaS</h3>
+                        <p>Sistema de assinatura com múltiplos planos, gestão de usuários e dashboard analítico.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                        <a href="projeto-saas.html" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-next" aria-label="Próximo" onclick="moveCarousel('projetos', 1)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                <div class="carousel-dots" id="projetosDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orçamento Section -->
+    <section id="orcamento" class="orcamento section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Crie seu <span class="gradient-text">Orçamento</span></h2>
+                <p class="section-subtitle">Responda algumas perguntas e receba um orçamento personalizado</p>
+            </div>
+            <div class="orcamento-container">
+                <div class="orcamento-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">Pergunta 1 de 8</span>
+                </div>
+                <form id="orcamentoForm" class="orcamento-form">
+                    <!-- Step 1: Tipo de Projeto -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Que tipo de projeto você precisa?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="tipoProjeto" value="site-institucional" required>
+                                <div class="radio-content">
+                                    <strong>Site Institucional</strong>
+                                    <span>Presença online para sua empresa</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tipoProjeto" value="ecommerce" required>
+                                <div class="radio-content">
+                                    <strong>E-commerce</strong>
+                                    <span>Loja virtual para vender produtos</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tipoProjeto" value="sistema" required>
+                                <div class="radio-content">
+                                    <strong>Sistema Personalizado</strong>
+                                    <span>Solução específica para seu negócio</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tipoProjeto" value="landing-page" required>
+                                <div class="radio-content">
+                                    <strong>Landing Page</strong>
+                                    <span>Página de conversão para campanhas</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Páginas -->
+                    <div class="form-step" data-step="2">
+                        <h3>Quantas páginas você precisa?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="numeroPaginas" value="1-3" required>
+                                <div class="radio-content">
+                                    <strong>1-3 páginas</strong>
+                                    <span>Site simples e objetivo</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="numeroPaginas" value="4-7" required>
+                                <div class="radio-content">
+                                    <strong>4-7 páginas</strong>
+                                    <span>Site médio com mais conteúdo</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="numeroPaginas" value="8-15" required>
+                                <div class="radio-content">
+                                    <strong>8-15 páginas</strong>
+                                    <span>Site completo e detalhado</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="numeroPaginas" value="15+" required>
+                                <div class="radio-content">
+                                    <strong>15+ páginas</strong>
+                                    <span>Site grande com múltiplas seções</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Design -->
+                    <div class="form-step" data-step="3">
+                        <h3>Como você quer o design?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="tipoDesign" value="template" required>
+                                <div class="radio-content">
+                                    <strong>Template Personalizado</strong>
+                                    <span>Adaptação de template existente</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tipoDesign" value="custom" required>
+                                <div class="radio-content">
+                                    <strong>Design Customizado</strong>
+                                    <span>Design único criado do zero</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Funcionalidades -->
+                    <div class="form-step" data-step="4">
+                        <h3>Quais funcionalidades você precisa? (Selecione todas que se aplicam)</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="formulario-contato">
+                                <span>Formulário de Contato</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="blog">
+                                <span>Blog/Notícias</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="galeria">
+                                <span>Galeria de Imagens</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="chat">
+                                <span>Chat Online</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="agendamento">
+                                <span>Sistema de Agendamento</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="area-membros">
+                                <span>Área de Membros</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="integracao-redes-sociais">
+                                <span>Integração com Redes Sociais</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="funcionalidades" value="multilinguagem">
+                                <span>Múltiplos Idiomas</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Prazo -->
+                    <div class="form-step" data-step="5">
+                        <h3>Qual o prazo desejado?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="prazo" value="urgente" required>
+                                <div class="radio-content">
+                                    <strong>Urgente (até 2 semanas)</strong>
+                                    <span>Precisa rápido</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="prazo" value="normal" required>
+                                <div class="radio-content">
+                                    <strong>Normal (3-6 semanas)</strong>
+                                    <span>Prazo padrão</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="prazo" value="flexivel" required>
+                                <div class="radio-content">
+                                    <strong>Flexível (7+ semanas)</strong>
+                                    <span>Sem pressa</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Manutenção -->
+                    <div class="form-step" data-step="6">
+                        <h3>Deseja incluir manutenção e suporte?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="manutencao" value="sim" required>
+                                <div class="radio-content">
+                                    <strong>Sim, quero manutenção</strong>
+                                    <span>Atualizações e suporte contínuo</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="manutencao" value="nao" required>
+                                <div class="radio-content">
+                                    <strong>Não, apenas o desenvolvimento</strong>
+                                    <span>Apenas a entrega do projeto</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 7: Informações de Contato -->
+                    <div class="form-step" data-step="7">
+                        <h3>Seus dados de contato</h3>
+                        <div class="input-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="telefone">Telefone/WhatsApp *</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="empresa">Nome da Empresa (opcional)</label>
+                            <input type="text" id="empresa" name="empresa">
+                        </div>
+                    </div>
+
+                    <!-- Step 8: Observações -->
+                    <div class="form-step" data-step="8">
+                        <h3>Alguma observação adicional?</h3>
+                        <div class="input-group">
+                            <label for="observacoes">Descreva detalhes adicionais sobre seu projeto</label>
+                            <textarea id="observacoes" name="observacoes" rows="6" placeholder="Conte-nos mais sobre suas necessidades, referências de design, funcionalidades especiais, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Resumo e Orçamento -->
+                    <div class="form-step" data-step="9">
+                        <h3>Resumo do Orçamento</h3>
+                        <div class="resumo-container" id="resumoContainer">
+                            <!-- Resumo será preenchido via JavaScript -->
+                        </div>
+                        <div class="orcamento-valor">
+                            <div class="valor-estimado">
+                                <span class="valor-label">Valor Estimado:</span>
+                                <span class="valor-numero" id="valorEstimado">R$ 0,00</span>
+                            </div>
+                            <p class="valor-nota">* Este é um valor estimado. O valor final pode variar após análise detalhada do projeto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Botões de Navegação -->
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" id="btnAnterior" style="display: none;">Anterior</button>
+                        <button type="button" class="btn btn-primary" id="btnProximo">Próximo</button>
+                        <button type="submit" class="btn btn-primary" id="btnEnviar" style="display: none;">Enviar Orçamento</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <img src="logo-favicon.png" alt="Codexa Logo" class="logo-img" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <svg class="logo logo-fallback" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <defs>
+                                <linearGradient id="logoGradientFooter" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#FF1744;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#9C27B0;stop-opacity:1" />
+                                </linearGradient>
+                                <filter id="glowFooter">
+                                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Símbolo de infinito com efeito de fita contínua -->
+                            <path d="M 40 50 
+                                     C 40 30, 60 30, 70 40
+                                     C 80 30, 100 30, 100 50
+                                     C 100 70, 80 70, 70 60
+                                     C 60 70, 40 70, 40 50 Z
+                                     M 100 50
+                                     C 100 30, 120 30, 130 40
+                                     C 140 30, 160 30, 160 50
+                                     C 160 70, 140 70, 130 60
+                                     C 120 70, 100 70, 100 50 Z" 
+                                  fill="url(#logoGradientFooter)" 
+                                  filter="url(#glowFooter)"/>
+                            <!-- Linha de conexão central para efeito de fita -->
+                            <path d="M 70 50 Q 100 50 130 50" 
+                                  fill="none"
+                                  stroke="url(#logoGradientFooter)" 
+                                  stroke-width="6" 
+                                  stroke-linecap="round"
+                                  filter="url(#glowFooter)"/>
+                        </svg>
+                        <span class="logo-text">CODEXA</span>
+                    </div>
+                    <p>Transformando ideias em soluções digitais de alta qualidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#orcamento">Orçamento</a></li>
+                        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:codexa.service@gmail.com">Email: codexa.service@gmail.com</a></li>
+                        <li><a href="https://wa.me/558597555271" target="_blank">WhatsApp: +55 85 9755-5271</a></li>
+                        <li><a href="https://instagram.com/codexadev" target="_blank">Instagram: @codexadev</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Codexa. Todos os direitos reservados. | <a href="termos-de-uso.html" style="color: var(--color-gray); text-decoration: none;">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Sucesso -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h3>Orçamento Enviado com Sucesso!</h3>
+            <p>Recebemos seu orçamento e entraremos em contato em breve.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
