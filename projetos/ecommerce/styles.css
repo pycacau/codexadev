@@ -462,6 +462,105 @@ button:hover {
   color: rgba(247, 247, 251, 0.8);
 }
 
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .orbit-1 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit-2 {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 820px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .search {
+    order: 3;
+    width: 100%;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .section,
+  .hero {
+    padding: 3rem 1.25rem;
+  }
+
+  .highlight {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .hero p,
+  .section p {
+    font-size: 0.95rem;
+  }
+
+  .hero-visual {
+    min-height: 240px;
+  }
+
+  .floating-chip {
+    position: relative;
+    display: inline-flex;
+    margin-top: 1rem;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+
+  .chip-a {
+    margin-right: 0.5rem;
+  }
+
+  .panel-body {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .logos {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .newsletter .field {
+    flex-direction: column;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}
+
 .newsletter::after {
   content: attr(data-status);
   display: block;

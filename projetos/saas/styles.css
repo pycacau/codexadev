@@ -297,6 +297,86 @@ body {
   }
 }
 
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 320px;
+    margin-top: 2rem;
+  }
+
+  .ring-1 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .ring-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .surface {
+    padding: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav ul {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .plan-grid,
+  .metric-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .shell {
+    width: min(100%, 90vw);
+  }
+}
+
+@media (max-width: 560px) {
+  body,
+  .shell {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 0;
+  }
+
+  .hero-panel,
+  .surface,
+  .plan-grid article,
+  .metric-cards article {
+    padding: 1.5rem;
+  }
+
+  .data-pill {
+    position: relative;
+    margin-top: 1rem;
+    animation: none;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+}
+
 .hero-panel ul {
   list-style: none;
   padding: 0;

@@ -502,3 +502,47 @@ textarea {
   }
 }
 
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    margin-top: 2rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 1.25rem;
+  }
+
+  .hero {
+    padding: 2rem 0 3rem;
+  }
+
+  .hero-card,
+  .module-card,
+  .glassy-card,
+  .cta {
+    padding: 1.75rem;
+  }
+
+  .hero-card {
+    min-width: auto;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+}
+

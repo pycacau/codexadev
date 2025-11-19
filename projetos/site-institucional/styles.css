@@ -416,3 +416,51 @@ h1 {
   }
 }
 
+@media (max-width: 720px) {
+  .hero {
+    padding: 2.5rem 1.5rem 3.5rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card,
+  .card-stack article,
+  .solutions-grid article,
+  .case-grid article {
+    padding: 1.5rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  body::before,
+  body::after {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .contact-form label input,
+  .contact-form label textarea {
+    width: 100%;
+  }
+}
+

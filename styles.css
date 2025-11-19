@@ -464,21 +464,27 @@ body {
     list-style: none;
     flex-grow: 1;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
 }
 
 .servico-features li {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     color: var(--color-gray);
-    position: relative;
-    padding-left: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
 }
 
 .servico-features li::before {
     content: '✓';
-    position: absolute;
-    left: 0;
     color: var(--color-orange);
     font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    font-size: 0.9rem;
+    line-height: 1;
 }
 
 /* Projetos */
@@ -979,17 +985,27 @@ body {
     }
 
     .carousel-wrapper {
-        padding: 0 45px;
+        padding: 0;
     }
 
     .carousel-btn {
-        width: 40px;
-        height: 40px;
+        display: none;
     }
 
-    .carousel-btn svg {
-        width: 18px;
-        height: 18px;
+    .carousel-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-track {
+        gap: 1rem;
+    }
+
+    .carousel-track .servico-card,
+    .carousel-track .projeto-card {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
     }
 
     .servico-card,
@@ -1044,25 +1060,11 @@ body {
     }
 
     .carousel-wrapper {
-        padding: 0 40px;
+        padding: 0;
     }
 
     .carousel-btn {
-        width: 36px;
-        height: 36px;
-    }
-
-    .carousel-btn-prev {
-        left: 0;
-    }
-
-    .carousel-btn-next {
-        right: 0;
-    }
-
-    .carousel-btn svg {
-        width: 16px;
-        height: 16px;
+        display: none;
     }
 
     .servico-card,
@@ -1136,17 +1138,7 @@ body {
 
 @media (max-width: 360px) {
     .carousel-wrapper {
-        padding: 0 35px;
-    }
-
-    .carousel-btn {
-        width: 32px;
-        height: 32px;
-    }
-
-    .carousel-btn svg {
-        width: 14px;
-        height: 14px;
+        padding: 0;
     }
 
     .hero-title {
