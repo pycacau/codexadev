@@ -21,6 +21,21 @@ body {
   overflow-x: hidden;
 }
 
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    conic-gradient(from 0deg at 50% 50%, rgba(113, 244, 255, 0.08), rgba(196, 76, 255, 0.08), rgba(255, 231, 125, 0.08));
+  mix-blend-mode: screen;
+  opacity: 0.35;
+  animation: rotateMesh 90s linear infinite;
+}
+
+@keyframes rotateMesh { to { transform: rotate(1turn) } }
+
 .gradient-bg {
   position: fixed;
   inset: 0;

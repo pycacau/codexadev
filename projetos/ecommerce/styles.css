@@ -25,6 +25,23 @@ body {
   position: relative;
 }
 
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    conic-gradient(from 0deg at 50% 50%, rgba(255, 221, 143, 0.06), rgba(255, 130, 250, 0.06), rgba(255, 221, 143, 0.06));
+  mix-blend-mode: screen;
+  opacity: 0.35;
+  animation: rotateMesh 90s linear infinite;
+}
+
+@keyframes rotateMesh {
+  to { transform: rotate(1turn) }
+}
+
 body::after {
   content: "";
   position: fixed;

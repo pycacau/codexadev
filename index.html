@@ -261,7 +261,6 @@
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
-                <div class="carousel-dots" id="servicosDots"></div>
             </div>
         </div>
     </section>
@@ -370,7 +369,6 @@
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
-                <div class="carousel-dots" id="projetosDots"></div>
             </div>
         </div>
     </section>
@@ -625,11 +623,66 @@
         </div>
     </section>
 
+    <!-- Feedbacks Section (abaixo do orçamento) -->
+    <section class="section feedback">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Feedbacks de <span class="gradient-text">Clientes</span></h2>
+                <p class="section-subtitle">Compartilhe sua experiência ou leia o que outros disseram</p>
+            </div>
+            <div class="feedback-container">
+                <div class="feedback-list">
+                    <div class="feedback-card">
+                        <div class="feedback-meta">
+                            <div class="feedback-id">
+                                <div class="feedback-avatar">AS</div>
+                                <div>
+                                    <div class="feedback-name">Ana Souza</div>
+                                    <div class="feedback-role">Gerente de Marketing</div>
+                                </div>
+                            </div>
+                            <div class="feedback-stars">★★★★★</div>
+                        </div>
+                        <div class="feedback-message">Entrega antes do prazo e atenção aos detalhes. Nosso site novo elevou a credibilidade e a taxa de conversão subiu 28% no primeiro mês.</div>
+                    </div>
+
+                    <div class="feedback-card">
+                        <div class="feedback-meta">
+                            <div class="feedback-id">
+                                <div class="feedback-avatar">LA</div>
+                                <div>
+                                    <div class="feedback-name">Lucas Almeida</div>
+                                    <div class="feedback-role">Fundador, VittaTech</div>
+                                </div>
+                            </div>
+                            <div class="feedback-stars">★★★★★</div>
+                        </div>
+                        <div class="feedback-message">E-commerce lançado com integração de pagamentos e frete automático. O suporte foi rápido e resolutivo. A operação ficou muito mais previsível.</div>
+                    </div>
+
+                    <div class="feedback-card">
+                        <div class="feedback-meta">
+                            <div class="feedback-id">
+                                <div class="feedback-avatar">CP</div>
+                                <div>
+                                    <div class="feedback-name">Carla Pereira</div>
+                                    <div class="feedback-role">Diretora Operacional</div>
+                                </div>
+                            </div>
+                            <div class="feedback-stars">★★★★★</div>
+                        </div>
+                        <div class="feedback-message">O ERP customizado reduziu retrabalho e trouxe visibilidade de ponta a ponta. Dashboards claros e equipe mais satisfeita com os processos.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer-grid">
+                <div class="footer-brand">
                     <div class="logo-container">
                         <img src="logo-favicon.png" alt="Codexa Logo" class="logo-img" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <svg class="logo logo-fallback" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -672,8 +725,8 @@
                     </div>
                     <p>Transformando ideias em soluções digitais de alta qualidade.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
+                <div class="footer-links">
+                    <h4 class="footer-title">Links</h4>
                     <ul>
                         <li><a href="#home">Início</a></li>
                         <li><a href="#servicos">Serviços</a></li>
@@ -682,17 +735,34 @@
                         <li><a href="termos-de-uso.html">Termos de Uso</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contato</h4>
                     <ul>
-                        <li><a href="mailto:codexa.service@gmail.com">Email: codexa.service@gmail.com</a></li>
-                        <li><a href="https://wa.me/558597555271" target="_blank">WhatsApp: +55 85 9755-5271</a></li>
-                        <li><a href="https://instagram.com/codexadev" target="_blank">Instagram: @codexadev</a></li>
+                        <li><a href="mailto:codexa.service@gmail.com">codexa.service@gmail.com</a></li>
+                        <li><a href="https://wa.me/558597555271" target="_blank">+55 85 9755-5271</a></li>
+                        <li><a href="https://instagram.com/codexadev" target="_blank">@codexadev</a></li>
                     </ul>
+                    <div class="social">
+                        <a href="https://instagram.com/codexadev" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-1.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+                        </a>
+                        <a href="https://wa.me/558597555271" target="_blank" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 3.5A10.5 10.5 0 006.2 20.8L3.5 21l.3-2.7A10.5 10.5 0 1020 3.5zm-5.6 12.2c-2.3-.2-5.2-3.1-5.4-5.4-.1-.6.3-1.3 1-1.5l.7-.2c.3-.1.6 0 .8.3l.7 1.1c.2.3.1.7-.2.9l-.4.3c.5 1.1 1.6 2.2 2.7 2.7l.3-.4c.2-.3.6-.4.9-.2l1.1.7c.3.2.4.5.3.8l-.2.7c-.2.7-.9 1.1-1.5 1z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form id="newsletterForm" method="POST" action="https://formsubmit.co/codexa.service@gmail.com" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Seu e-mail" required>
+                        <input type="hidden" name="_subject" value="Newsletter Codexa">
+                        <button class="btn btn-primary" type="submit">Inscrever</button>
+                    </form>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Codexa. Todos os direitos reservados. | <a href="termos-de-uso.html" style="color: var(--color-gray); text-decoration: none;">Termos de Uso</a></p>
+            <div class="footer-legal">
+                <p>&copy; 2024 Codexa. Todos os direitos reservados. • <a href="termos-de-uso.html">Termos de Uso</a></p>
             </div>
         </div>
     </footer>

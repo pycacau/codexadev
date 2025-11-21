@@ -27,6 +27,23 @@ body {
   overflow-x: hidden;
 }
 
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 120px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 120px),
+    conic-gradient(from 0deg at 50% 50%, rgba(139, 92, 246, 0.06), rgba(102, 241, 255, 0.06), rgba(255, 130, 210, 0.06));
+  mix-blend-mode: screen;
+  opacity: 0.3;
+  animation: rotateMesh 90s linear infinite;
+}
+
+@keyframes rotateMesh { to { transform: rotate(1turn) } }
+
 body::before,
 body::after {
   content: "";

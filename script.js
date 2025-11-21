@@ -52,38 +52,38 @@ const totalSteps = 9;
 // Valores base para cálculo
 const precos = {
     tipoProjeto: {
-        'site-institucional': 2000,
-        'ecommerce': 5000,
-        'sistema': 8000,
-        'landing-page': 1500
+        'site-institucional': 1200,
+        'ecommerce': 3500,
+        'sistema': 6000,
+        'landing-page': 900
     },
     numeroPaginas: {
         '1-3': 0,
-        '4-7': 1000,
-        '8-15': 2500,
-        '15+': 4000
+        '4-7': 700,
+        '8-15': 1700,
+        '15+': 3000
     },
     tipoDesign: {
         'template': 0,
-        'custom': 2000
+        'custom': 1200
     },
     funcionalidades: {
-        'formulario-contato': 200,
-        'blog': 800,
-        'galeria': 400,
-        'chat': 1000,
-        'agendamento': 1500,
-        'area-membros': 2000,
-        'integracao-redes-sociais': 500,
-        'multilinguagem': 1200
+        'formulario-contato': 120,
+        'blog': 500,
+        'galeria': 250,
+        'chat': 700,
+        'agendamento': 1000,
+        'area-membros': 1400,
+        'integracao-redes-sociais': 300,
+        'multilinguagem': 800
     },
     prazo: {
-        'urgente': 1500,
+        'urgente': 1000,
         'normal': 0,
-        'flexivel': -500
+        'flexivel': -400
     },
     manutencao: {
-        'sim': 500,
+        'sim': 350,
         'nao': 0
     }
 };
@@ -429,6 +429,7 @@ window.addEventListener('load', () => {
             console.log('Logo carregada com sucesso!');
         });
     }
+    
 });
 
 // Sistema de Carrossel
@@ -515,26 +516,17 @@ function updateCarouselPosition(name) {
         item.style.height = 'auto';
     });
     
-    // Encontrar a altura máxima entre os cards visíveis
+    // Encontrar a altura máxima entre todos os cards para evitar saltos ao trocar de slide
     let maxHeight = 0;
-    const visibleStart = carousel.currentIndex;
-    const visibleEnd = Math.min(carousel.currentIndex + carousel.itemsPerView, items.length);
-    
-    for (let i = visibleStart; i < visibleEnd; i++) {
-        if (items[i]) {
-            const height = items[i].offsetHeight;
-            if (height > maxHeight) {
-                maxHeight = height;
-            }
-        }
-    }
-    
-    // Aplicar altura máxima a todos os cards visíveis para alinhar os botões
-    for (let i = visibleStart; i < visibleEnd; i++) {
-        if (items[i]) {
-            items[i].style.height = `${maxHeight}px`;
-        }
-    }
+    items.forEach(item => {
+        const h = item.offsetHeight;
+        if (h > maxHeight) maxHeight = h;
+    });
+
+    // Aplicar altura máxima a todos os cards para manter continuidade visual
+    items.forEach(item => {
+        item.style.height = `${maxHeight}px`;
+    });
     
     const translateX = -(carousel.currentIndex * (itemWidth + gap));
     carousel.track.style.transform = `translateX(${translateX}px)`;
