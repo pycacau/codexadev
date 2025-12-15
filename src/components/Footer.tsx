@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Instagram, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
 
 const socialLinks = [
-  { icon: Instagram, href: "https://www.instagram.com/codexa.dev", label: "Instagram" },
+  { icon: Instagram, href: "https://instagram.com/codexadev", label: "Instagram" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/codexa-dev", label: "LinkedIn" },
-  { icon: Github, href: "https://github.com/codexa", label: "GitHub" },
+  { icon: Github, href: "https://github.com/pycacau/codexadev", label: "GitHub" },
 ];
 
 const quickLinks = [
@@ -99,15 +99,15 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-muted-foreground justify-center md:justify-start">
                 <Mail size={16} className="text-primary" />
-                contato@codexa.dev.br
+                codexa.service@gmail.com
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground justify-center md:justify-start">
                 <Phone size={16} className="text-primary" />
-                +55 (88) 99999-9999
+                +55 85 9755-5271
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground justify-center md:justify-start">
                 <MapPin size={16} className="text-primary" />
-                Av. Beira Mar, 1000 · Fortaleza · CE
+                Fortaleza · CE · Brasil
               </li>
             </ul>
           </motion.div>

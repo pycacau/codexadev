@@ -10,44 +10,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
-const projects = [
-  {
-    title: "Orbitale Store",
-    description:
-      "E-commerce omnichannel com estoque unificado, integração a marketplaces, PDV e painel do lojista para governança de preços e promoções.",
-    tags: ["E-commerce", "Omnichannel", "Paywall", "Marketplace"],
-    image:
-      "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=1200&h=700&fit=crop",
-    link: "#",
-  },
-  {
-    title: "Fluxora Suite",
-    description:
-      "Plataforma ERP modular que sincroniza vendas, estoque e financeiro com workflows, automações e dashboards executivos.",
-    tags: ["ERP", "Financeiro", "Estoque", "Automação"],
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=700&fit=crop",
-    link: "#",
-  },
-  {
-    title: "Pulsewave Analytics",
-    description:
-      "Plataforma SaaS de análise e previsão com conectores plug-and-play, playbooks de automação e métricas de churn e MRR.",
-    tags: ["SaaS", "Analytics", "MRR", "Automação"],
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=700&fit=crop",
-    link: "#",
-  },
-  {
-    title: "Alvorar Tech",
-    description:
-      "Consultoria e engenharia de software focada em discovery, design systems e squads multidisciplinares para acelerar produtos digitais.",
-    tags: ["Consultoria", "Design System", "Engenharia", "Produto"],
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=700&fit=crop",
-    link: "#",
-  },
-];
+import { projects } from "@/data/projects";
 
 export const Projects = () => {
   const plugin = useRef(
@@ -163,7 +126,9 @@ export const Projects = () => {
                         
                         {/* Overlay Link */}
                         <motion.a
-                          href={project.link}
+                          href={project.liveUrl || project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="absolute top-4 right-4 w-10 h-10 rounded-full bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary"
                           whileHover={{ scale: 1.1, rotate: 15 }}
                           whileTap={{ scale: 0.95 }}
@@ -204,7 +169,7 @@ export const Projects = () => {
                         </div>
 
                         <motion.a
-                          href={project.link}
+                          href={`/projetos/${project.slug}`}
                           className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors group/link"
                           whileHover={{ x: 5 }}
                         >
