@@ -1,17 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>E-commerce - Codexa (demo)</title>
-  <link rel="icon" href="/logo.png">
-  <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Completo - Codexa</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo.png">
+    <link rel="shortcut icon" type="image/png" href="/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main style="padding:32px;font-family:Inter,system-ui,Arial;">
-    <h1>E-commerce — Demo</h1>
-    <p>Preview do projeto de e-commerce com integração de pagamentos.</p>
-    <p><a href="/projetos/ecommerce/index.html" target="_blank">Abrir versão local</a></p>
-  </main>
+    <div class="wallpaper">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+        <span class="blob blob-c"></span>
+        <span class="blob blob-d"></span>
+        <span class="noise-layer"></span>
+    </div>
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo-container">
+                <a href="/" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                    <img src="/logo.png" alt="Codexa Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-text">CODEXA</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Início</a></li>
+                <li><a href="/#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="/#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="/#orcamento" class="nav-link">Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <a href="/projetos" class="btn btn-secondary" style="margin-bottom: 2rem; display: inline-block;">← Voltar para Projetos</a>
+                
+                <div class="section-header" style="text-align: left; margin-bottom: 3rem;">
+                    <h1 class="section-title" style="text-align: left;">E-commerce Completo</h1>
+                    <p class="section-subtitle" style="text-align: left;">Loja virtual com integração de pagamentos, gestão de produtos e painel administrativo.</p>
+                </div>
+
+                <div class="projeto-tags" style="margin-bottom: 3rem;">
+                    <span class="tag">Vue.js</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">Stripe</span>
+                </div>
+
+                <div class="panel-block" style="margin-bottom: 3rem;">
+                    <h2>Galeria do Projeto</h2>
+                    <div>
+                        <img src="ecome.png" alt="Prévia do E-commerce" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="panel-block" style="margin-bottom: 3rem;">
+                    <h2>Sobre o Projeto</h2>
+                    <p>
+                        Plataforma de e-commerce completa desenvolvida com foco em performance, segurança e experiência do usuário, incluindo todas as funcionalidades necessárias para uma loja virtual moderna.
+                    </p>
+                    <h3>Funcionalidades:</h3>
+                    <ul>
+                        <li>Catálogo de produtos com filtros avançados</li>
+                        <li>Gestão de estoque e integração de marketplace</li>
+                        <li>Checkout otimizado e integração com gateways</li>
+                    </ul>
+                    <h3>Tecnologias Utilizadas:</h3>
+                    <p>
+                        Vue.js, Laravel, Stripe, PostgreSQL
+                    </p>
+                </div>
+
+                <div style="text-align: center; padding: 3rem; background: var(--gradient-primary); border-radius: 20px;">
+                    <h2 style="margin-bottom: 1rem; font-size: 1.75rem;">Visite o Site</h2>
+                    <p style="margin-bottom: 2rem; opacity: 0.9;">Confira o projeto em funcionamento</p>
+                    <a href="/projetos/ecommerce/index.html" target="_blank" class="btn btn-secondary" style="background: var(--color-light); color: var(--color-dark); border: none;">
+                        Ver site
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.8;">* Projeto hospedado localmente para demonstração</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <img src="/logo.png" alt="Codexa" style="height:36px;">
+                    </div>
+                    <p>Transformando ideias em soluções digitais de alta qualidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="/" class="nav-link">Início</a></li>
+                        <li><a href="/#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="/#projetos" class="nav-link">Projetos</a></li>
+                        <li><a href="/termos-de-uso.html" class="nav-link">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>Email: codexa.service@gmail.com</li>
+                        <li>Telefone: +55 85 9755-5271</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Codexa. Todos os direitos reservados. | <a href="/termos-de-uso.html" style="color: var(--color-gray); text-decoration: none;">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

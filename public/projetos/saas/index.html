@@ -1,17 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Plataforma SaaS - Codexa (demo)</title>
-  <link rel="icon" href="/logo.png">
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <main style="padding:32px;font-family:Inter,system-ui,Arial;">
-    <h1>Plataforma SaaS — Demo</h1>
-    <p>Preview da plataforma SaaS usada como exemplo no portfólio.</p>
-    <p><a href="/projetos/saas/index.html" target="_blank">Abrir versão local</a></p>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulsewave Analytics | Plataforma SaaS</title>
+    <link rel="icon" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gradient-bg"></div>
+    <header class="shell">
+      <nav class="nav">
+        <div class="logo">Pulsewave</div>
+        <ul>
+          <li><a href="#plataforma">Plataforma</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#metricas">Metricas</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="ghost">Entrar</button>
+          <button class="primary">Criar conta</button>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="chip">Insights preditivos em minutos</p>
+          <h1>
+            Tenha visao clara de receita recorrente, churn e engajamento em um
+            painel vivo.
+          </h1>
+          <p class="lead">
+            Pulsewave sincroniza dados de billing, produto e suporte para
+            projetar tendencias e disparar automacoes inteligentes.
+          </p>
+          <div class="hero-actions">
+            <button class="primary">Iniciar teste gratuito</button>
+            <button class="ghost">Assistir demo</button>
+          </div>
+          <div class="signals">
+            <div>
+              <span>MRR</span>
+              <strong>R$ 820K</strong>
+              <small>+12% este trimestre</small>
+            </div>
+            <div>
+              <span>Churn previsto</span>
+              <strong>1.8%</strong>
+              <small>-0.6 vs media</small>
+            </div>
+            <div>
+              <span>Health score</span>
+              <strong>92</strong>
+              <small>clientes enterprise</small>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="plasma-ring ring-1"></div>
+          <div class="plasma-ring ring-2"></div>
+          <div class="hero-panel">
+            <header>
+              <p>Live cohorts</p>
+              <span>Atualizado agora</span>
+            </header>
+            <div class="chart">
+              <div style="--value: 85"></div>
+              <div style="--value: 60"></div>
+              <div style="--value: 72"></div>
+              <div style="--value: 50"></div>
+              <div style="--value: 90"></div>
+            </div>
+            <ul>
+              <li>
+                <span>Cohort mobile</span>
+                <strong>Retencao 94%</strong>
+              </li>
+              <li>
+                <span>Cohort enterprise</span>
+                <strong>Expandiu R$ 120K</strong>
+              </li>
+              <li>
+                <span>Campanha Phoenix</span>
+                <strong>Playbooks ativos</strong>
+              </li>
+            </ul>
+          </div>
+          <div class="data-pill pill-a">
+            <span>LTV</span>
+            R$ 5.430
+          </div>
+          <div class="data-pill pill-b">
+            <span>API Calls</span>
+            2.1M/mês
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section id="plataforma" class="surface grid">
+        <div>
+          <p class="chip ghost">Plataforma</p>
+          <h2>Orquestracao de dados com conectores plug-and-play.</h2>
+          <p>
+            Conecte billing, CRM, helpdesk e data warehouse em minutos. Pipelines
+            escalam com filas assinc e versionamento automatizado.
+          </p>
+        </div>
+        <div class="pillars">
+          <article>
+            <h3>Feature flags</h3>
+            <p>Lance experimetos por segmentacao de uso e billing.</p>
+          </article>
+          <article>
+            <h3>Automation canvas</h3>
+            <p>Crie fluxos com condicoes, webhooks e steps serverless.</p>
+          </article>
+          <article>
+            <h3>Observabilidade</h3>
+            <p>Logs estruturados, tracing distribuido e alertas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="planos" class="plans">
+        <p class="chip ghost">Planos</p>
+        <h2>Precificacao alinhada ao crescimento.</h2>
+        <div class="plan-grid">
+          <article>
+            <header>
+              <h3>Launch</h3>
+              <span>R$ 890 / mes</span>
+            </header>
+            <ul>
+              <li>Até 5 integrações</li>
+              <li>Playbooks ilimitados</li>
+              <li>Suporte em 12h</li>
+            </ul>
+            <button class="ghost">Assinar</button>
+          </article>
+          <article class="featured">
+            <header>
+              <h3>Scale</h3>
+              <span>R$ 2.400 / mes</span>
+            </header>
+            <ul>
+              <li>Conectores enterprise</li>
+              <li>Ambiente dedicado</li>
+              <li>CSM exclusivo</li>
+            </ul>
+            <button class="primary">Comecar agora</button>
+          </article>
+          <article>
+            <header>
+              <h3>Infinity</h3>
+              <span>Custom</span>
+            </header>
+            <ul>
+              <li>Contrato anual flexivel</li>
+              <li>SLA 99,95%</li>
+              <li>Time embedado</li>
+            </ul>
+            <button class="ghost">Falar com vendas</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="metricas" class="surface metrics">
+        <div>
+          <p class="chip ghost">Metricas</p>
+          <h2>Mantenha o pulso do negocio.</h2>
+          <p>Indicadores acionaveis, anomaly detection e alertas proativos.</p>
+        </div>
+        <div class="metric-cards">
+          <article>
+            <p>Tempo medio de ativacao</p>
+            <strong>32h</strong>
+            <span>-18% vs trimestre anterior</span>
+          </article>
+          <article>
+            <p>Expansao net</p>
+            <strong>138%</strong>
+            <span>Upsell e cross sell</span>
+          </article>
+          <article>
+            <p>Tickets automatizados</p>
+            <strong>74%</strong>
+            <span>Playbooks resolvidos</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell footer">
+      <div>
+        <h4>Pulsewave Analytics</h4>
+        <p>Rua Amplitude, 90 · Sao Paulo</p>
+      </div>
+      <form class="waitlist">
+        <label for="waitEmail">Lista de espera da release Orion</label>
+        <div class="field">
+          <input id="waitEmail" type="email" placeholder="email@empresa.com" />
+          <button type="submit">Reservar acesso</button>
+        </div>
+      </form>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

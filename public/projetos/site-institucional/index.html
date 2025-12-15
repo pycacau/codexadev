@@ -1,18 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Site Institucional - Codexa (demo)</title>
-  <link rel="icon" href="/logo.png">
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <main style="padding:32px;font-family:Inter,system-ui,Arial;">
-    <h1>Site Institucional — Demo</h1>
-    <p>Esta é a versão estática embutida para demonstração do projeto "Site Institucional".</p>
-    <p>Cliente: Escritório de Advocacia Roney.</p>
-    <p><a href="https://www.roney.adv.br" target="_blank" rel="noopener">Abrir site real (externo)</a></p>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvorar Tech | Consultoria e Tecnologia</title>
+    <link rel="icon" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="topo">
+      <nav class="navbar">
+        <div class="logo">Alvorar<span>Tech</span></div>
+        <button class="mobile-toggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#solucoes">Solucoes</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a class="btn secondary" href="#contato">Falar com especialista</a>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <p class="badge">Consultoria + Engenharia de Software</p>
+          <h1>
+            Projetos digitais para tirar ideias do papel com previsibilidade.
+          </h1>
+          <p class="lead">
+            Guiamos empresas na modernizacao de produtos e processos,
+            combinando estrategia, design e tecnologia de ponta.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contato">Solicitar proposta</a>
+            <a class="btn ghost" href="#cases">Ver cases</a>
+          </div>
+          <div class="stats">
+            <div>
+              <strong>11 anos</strong>
+              <span>construindo plataformas digitais</span>
+            </div>
+            <div>
+              <strong>+80</strong>
+              <span>equipes treinadas em produto</span>
+            </div>
+            <div>
+              <strong>NPS 92</strong>
+              <span>satisfacao recorrente</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <header>
+            <h2>Radar de Iniciativas 2024</h2>
+            <p>Pronto em 6 semanas</p>
+          </header>
+          <ul>
+            <li>
+              <span>Discovery e research</span>
+              <strong>88% completo</strong>
+            </li>
+            <li>
+              <span>Arquitetura e prototipos</span>
+              <strong>72% completo</strong>
+            </li>
+            <li>
+              <span>Roadmap executivo</span>
+              <strong>100% aprovado</strong>
+            </li>
+          </ul>
+          <footer>
+            <p>Sessao semanal com stakeholders e indicadores ao vivo.</p>
+          </footer>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="sobre" class="section grid-two">
+        <div>
+          <p class="section-label">Quem somos</p>
+          <h2>Squads multidisciplinares, resultados acelerados.</h2>
+          <p>
+            Atuamos como extensao da sua companhia, conectando liderancas de
+            tecnologia e negocio para planejar e executar evolucoes digitais
+            complexas sem perder velocidade.
+          </p>
+        </div>
+        <div class="card-stack">
+          <article>
+            <h3>Produto & Growth</h3>
+            <p>Planejamento de features baseado em dados e experimentacao.</p>
+          </article>
+          <article>
+            <h3>Arquitetura cloud</h3>
+            <p>Modernizacao com microsservicos, observabilidade e SRE.</p>
+          </article>
+          <article>
+            <h3>Enablement</h3>
+            <p>Programas internos para formar squads e lideres de produto.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="solucoes" class="section solutions">
+        <p class="section-label">Servicos</p>
+        <h2>Da visao a operacao, ponta a ponta.</h2>
+        <div class="solutions-grid">
+          <article>
+            <h3>Discovery guiado</h3>
+            <p>Workshops, co-criacao, mapa de oportunidades e business case.</p>
+          </article>
+          <article>
+            <h3>Design systems</h3>
+            <p>Biblioteca viva, tokens multiplataforma e guidelines.</p>
+          </article>
+          <article>
+            <h3>Engenharia full stack</h3>
+            <p>Stack moderna com pipelines automatizados e testes.</p>
+          </article>
+          <article>
+            <h3>Suporte evolutivo</h3>
+            <p>OKRs trimestrais, squads dedicados e SLOs definidos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cases" class="section cases">
+        <p class="section-label">Resultados</p>
+        <h2>Cases recentes</h2>
+        <div class="case-grid">
+          <article>
+            <header>
+              <p>EduTech · 4 meses</p>
+              <strong>Plataforma de cursos escalavel</strong>
+            </header>
+            <ul>
+              <li>+230% de matriculas organicas</li>
+              <li>Infra multi-tenant com billing automatico</li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <p>Financeiro · 6 meses</p>
+              <strong>Nova jornada de onboarding digital</strong>
+            </header>
+            <ul>
+              <li>Reducao de 63% no churn inicial</li>
+              <li>Integração com bureaus e assinatura eletrônica</li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <p>Indústria · 3 meses</p>
+              <strong>Portal de distribuidores</strong>
+            </header>
+            <ul>
+              <li>Pedidos com rastreio em tempo real</li>
+              <li>Catálogo inteligente com recomendações</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contato" class="section cta">
+        <div>
+          <p class="section-label">Vamos conversar</p>
+          <h2>Montamos um plano em ate 10 dias uteis.</h2>
+          <p>Responda o formulário ao lado e retornamos em menos de 24h.</p>
+        </div>
+        <form class="contact-form">
+          <label>
+            Nome completo
+            <input type="text" placeholder="Seu nome" required />
+          </label>
+          <label>
+            Empresa
+            <input type="text" placeholder="Nome da empresa" />
+          </label>
+          <label>
+            Email corporativo
+            <input type="email" placeholder="nome@empresa.com" required />
+          </label>
+          <label>
+            Desafio atual
+            <textarea rows="4" placeholder="Conte o contexto do projeto"></textarea>
+          </label>
+          <button class="btn primary full">Enviar mensagem</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Alvorar Tech · Rua Horizonte, 155 · Sao Paulo · +55 11 4000-2020</p>
+      <a href="#topo">Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

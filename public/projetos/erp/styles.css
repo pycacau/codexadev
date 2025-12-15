@@ -1,0 +1,71 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg: #03040c;
+  --bg-soft: #080a1a;
+  --fg: #f8fbff;
+  --muted: #a7afc4;
+  --accent: #66f1ff;
+  --accent-strong: #8b5cf6;
+  --accent-hot: #ff82d2;
+  --card: rgba(8, 9, 22, 0.8);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, #041029, var(--bg) 60%);
+  color: var(--fg);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 120px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 120px),
+    conic-gradient(from 0deg at 50% 50%, rgba(139, 92, 246, 0.06), rgba(102, 241, 255, 0.06), rgba(255, 130, 210, 0.06));
+  mix-blend-mode: screen;
+  opacity: 0.3;
+  animation: rotateMesh 90s linear infinite;
+}
+
+@keyframes rotateMesh { to { transform: rotate(1turn) } }
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(102, 241, 255, 0.3), transparent 65%);
+  filter: blur(60px);
+  z-index: -2;
+  animation: drift 22s linear infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(80px, 40px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* truncated: full styles copied from source */

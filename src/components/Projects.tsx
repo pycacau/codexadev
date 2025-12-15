@@ -118,7 +118,12 @@ export const Projects = () => {
                         <motion.img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain bg-muted"
+                          onError={(e) => {
+                            const img = e.currentTarget as HTMLImageElement;
+                            if (img.src.endsWith('/placeholder.svg')) return;
+                            img.src = '/placeholder.svg';
+                          }}
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.6 }}
                         />
@@ -126,7 +131,7 @@ export const Projects = () => {
                         
                         {/* Overlay Link */}
                         <motion.a
-                          href={project.liveUrl || project.link}
+                          href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="absolute top-4 right-4 w-10 h-10 rounded-full bg-primary/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary"

@@ -35,11 +35,11 @@ const ProjectDetail = () => {
           </div>
 
           <div className="mb-8">
-            <iframe src={project.localPath} title={project.title} className="w-full h-[600px] rounded-2xl border" />
+            <iframe src={project.detailPath ?? project.localPath} title={project.title} className="w-full h-[600px] rounded-2xl border" />
           </div>
 
           <div className="flex gap-4">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Visitar Site</a>
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Ver Site Original</a>
             <Link to="/" className="btn btn-secondary">Voltar</Link>
           </div>
         </div>
