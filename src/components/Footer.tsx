@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 
 const socialLinks = [
   { icon: Instagram, href: "https://instagram.com/codexadev", label: "Instagram" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/codexa-dev", label: "LinkedIn" },
-  { icon: Github, href: "https://github.com/pycacau/codexadev", label: "GitHub" },
+  { icon: MessageCircle, href: "https://wa.me/558597555271", label: "WhatsApp" },
 ];
 
 const quickLinks = [
