@@ -51,7 +51,7 @@ export const Header = () => {
         </nav>
 
         <a
-          href="https://wa.me/5588999999999"
+          href="https://wa.me/558597555271"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:flex btn-primary text-sm py-3 px-6"
@@ -89,7 +89,7 @@ export const Header = () => {
                 </a>
               ))}
               <a
-                href="https://wa.me/5588999999999"
+                href="https://wa.me/558597555271"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-center text-sm py-3 mt-2"

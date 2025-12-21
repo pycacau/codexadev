@@ -48,6 +48,7 @@ export const projects = [
     localPath: "https://clintiatiangua.pages.dev",
     detailPath: "https://clintiatiangua.pages.dev",
     liveUrl: "https://clintiatiangua.pages.dev",
+    hidden: true,
   },
 ];
 

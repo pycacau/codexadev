@@ -90,6 +90,23 @@ export const Projects = () => {
           transition={{ duration: 0.8 }}
           className="px-4 md:px-12"
         >
+          <motion.div
+            initial={{ opacity: 0, y: 4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-4 md:hidden flex items-center justify-center gap-2 text-muted-foreground"
+          >
+            <span className="text-xs">Deslize para o lado</span>
+            <motion.span
+              animate={{ x: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-flex"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.span>
+          </motion.div>
           <Carousel
             opts={{
               align: "start",
@@ -99,7 +116,7 @@ export const Projects = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-4">
-              {projects.map((project, index) => (
+              {projects.filter((p) => !("hidden" in p) || !p.hidden).map((project, index) => (
                 <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -187,8 +204,8 @@ export const Projects = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-4 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
-            <CarouselNext className="hidden md:flex -right-4 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
+            <CarouselPrevious className="hidden md:flex -left-8 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
+            <CarouselNext className="hidden md:flex -right-8 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
           </Carousel>
         </motion.div>
 

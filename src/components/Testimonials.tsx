@@ -46,6 +46,62 @@ const testimonials = [
     rating: 5,
     text: "O cardápio digital transformou a experiência dos nossos clientes. Pedidos aumentaram e a gestão ficou muito mais simples.",
   },
+  {
+    name: "Fernanda Lima",
+    role: "Sócia, Agência Nimbus",
+    avatar: "FL",
+    rating: 5,
+    text: "O site institucional ficou impecável e alinhado à nossa marca. A performance e o SEO já trouxeram leads orgânicos em poucos dias.",
+  },
+  {
+    name: "Bruno Duarte",
+    role: "COO, Loja Prime",
+    avatar: "BD",
+    rating: 5,
+    text: "Nossa loja virtual ganhou escala. Carrinho fluido, checkout seguro e relatórios que finalmente fazem sentido para o time.",
+  },
+  {
+    name: "Patrícia Moreira",
+    role: "Gestora, Clínica Vida",
+    avatar: "PM",
+    rating: 5,
+    text: "Sistema de agendamentos sob medida. Reduziu faltas, melhorou comunicação e trouxe previsibilidade para o mês.",
+  },
+  {
+    name: "João Henrique",
+    role: "Diretor, Alpha Digital",
+    avatar: "JH",
+    rating: 5,
+    text: "A manutenção mensal tirou o peso do time. Correções proativas e segurança mantidas sem interromper o negócio.",
+  },
+  {
+    name: "Beatriz Rocha",
+    role: "Arquiteta",
+    avatar: "BR",
+    rating: 5,
+    text: "A identidade visual elevou meu posicionamento. Logo, paleta e tipografia com coerência — ficou profissional e memorável.",
+  },
+  {
+    name: "Rafael Campos",
+    role: "Consultor",
+    avatar: "RC",
+    rating: 5,
+    text: "A consultoria foi precisa. Diagnóstico claro e plano de ação que priorizou impacto real sobre vaidade.",
+  },
+  {
+    name: "Camila Torres",
+    role: "Gerente, Bistro da Serra",
+    avatar: "CT",
+    rating: 5,
+    text: "O cardápio digital com QR reduziu filas e erros. Atualização em minutos e aparência sempre impecável.",
+  },
+  {
+    name: "Eduardo Nunes",
+    role: "CTO, NovaLabs",
+    avatar: "EN",
+    rating: 5,
+    text: "Integrações e automações que cortaram tarefas manuais. O time foca no que gera valor e o fluxo segue sem fricção.",
+  },
 ];
 
 export const Testimonials = () => {
@@ -119,6 +175,23 @@ export const Testimonials = () => {
           transition={{ duration: 0.8 }}
           className="px-4 md:px-12"
         >
+          <motion.div
+            initial={{ opacity: 0, y: 4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-4 md:hidden flex items-center justify-center gap-2 text-muted-foreground"
+          >
+            <span className="text-xs">Deslize para o lado</span>
+            <motion.span
+              animate={{ x: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-flex"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.span>
+          </motion.div>
           <Carousel
             opts={{
               align: "start",
@@ -193,8 +266,8 @@ export const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-4 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
-            <CarouselNext className="hidden md:flex -right-4 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
+            <CarouselPrevious className="hidden md:flex -left-8 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
+            <CarouselNext className="hidden md:flex -right-8 bg-card/80 border-border hover:bg-primary hover:text-primary-foreground hover:border-primary" />
           </Carousel>
         </motion.div>
 

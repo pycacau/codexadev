@@ -91,7 +91,7 @@ Empresa: ${formData.company}
 *Observações:* ${formData.notes}
     `.trim();
 
-    window.open(`https://wa.me/5588999999999?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/558597555271?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   const canProceed = () => {
