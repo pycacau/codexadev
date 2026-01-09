@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Instagram, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const socialLinks = [
   { icon: Instagram, href: "https://instagram.com/codexadev", label: "Instagram" },
@@ -7,13 +8,23 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Orçamento", href: "#orcamento" },
+  { label: "Início", href: "/" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Projetos", href: "/#projetos" },
+  { label: "Orçamento", href: "/#orcamento" },
 ];
 
-export const Footer = () => {
+export const LegalFooter = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (href: string) => {
+    if (href.startsWith("/")) {
+      navigate(href);
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <footer className="relative pt-24 pb-8 overflow-hidden">
       {/* Background */}
@@ -28,10 +39,13 @@ export const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <a href="#" className="flex items-center gap-2 mb-4 justify-center md:justify-start">
+            <button 
+              onClick={() => navigate("/")}
+              className="flex items-center gap-2 mb-4 justify-center md:justify-start hover:opacity-80 transition-opacity"
+            >
               <img src="/logo.png" alt="Codexa" className="w-10 h-10 rounded-lg" />
               <span className="font-heading font-bold text-xl text-foreground">CODEXA</span>
-            </a>
+            </button>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Transformamos suas ideias em soluções digitais. Desenvolvimento web profissional com foco em resultados.
             </p>
@@ -60,12 +74,12 @@ export const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <button
+                    onClick={() => handleNavigation(link.href)}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -118,12 +132,18 @@ export const Footer = () => {
             © {new Date().getFullYear()} Codexa. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
-            <a href="/politica-de-privacidade" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => navigate("/politica-de-privacidade")}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               Política de Privacidade
-            </a>
-            <a href="/termos-de-uso" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => navigate("/termos-de-uso")}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               Termos de Uso
-            </a>
+            </button>
           </div>
         </div>
       </div>
