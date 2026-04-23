@@ -105,7 +105,7 @@ const Privacy = () => {
           </Link>
 
           <span className="eyebrow">Documento legal</span>
-          <h1 className="display text-5xl md:text-7xl mt-6 mb-6 text-balance">
+          <h1 className="display-fluid-footer mt-6 mb-6 text-balance">
             Política de<br />privacidade<span className="text-primary">.</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">

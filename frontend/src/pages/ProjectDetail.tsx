@@ -15,7 +15,7 @@ const ProjectDetail = () => {
         <main className="pt-32 pb-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
             <span className="eyebrow justify-center">Erro 404</span>
-            <h1 className="display text-5xl md:text-7xl mt-6 mb-6">
+            <h1 className="display-fluid-footer mt-6 mb-6">
               Projeto não encontrado<span className="text-primary">.</span>
             </h1>
             <p className="text-muted-foreground mb-10">
@@ -47,7 +47,7 @@ const ProjectDetail = () => {
           <div className="grid grid-cols-12 gap-6 mb-12">
             <div className="col-span-12 md:col-span-8">
               <span className="eyebrow">Case · em produção</span>
-              <h1 className="display text-5xl md:text-7xl mt-6 mb-6 text-balance">
+              <h1 className="display-fluid-footer mt-6 mb-6 text-balance">
                 {project.title}<span className="text-primary">.</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">

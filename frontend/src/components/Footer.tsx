@@ -41,7 +41,7 @@ export const Footer = () => {
             <div className="mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-6">
               Vamos conversar
             </div>
-            <h3 className="display text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-balance">
+            <h3 className="display-fluid-footer tracking-tight text-balance">
               Tem uma ideia? <br />
               <a
                 href="https://wa.me/558597555271"
@@ -51,7 +51,7 @@ export const Footer = () => {
                 data-testid="footer-whatsapp-cta"
               >
                 fale conosco
-                <ArrowUpRight size={40} strokeWidth={1.5} />
+                <ArrowUpRight className="w-[0.9em] h-[0.9em]" strokeWidth={1.5} />
               </a>
             </h3>
           </div>

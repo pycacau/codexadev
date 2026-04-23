@@ -14,7 +14,10 @@ const NotFound = () => {
     <div className="min-h-screen bg-background flex items-center justify-center grain relative overflow-hidden">
       <div className="max-w-xl mx-auto text-center px-6">
         <span className="eyebrow justify-center">Erro 404</span>
-        <h1 className="display text-[120px] md:text-[200px] leading-none mt-8 mb-8 text-foreground">
+        <h1
+          className="display text-foreground mt-8 mb-8"
+          style={{ fontSize: "clamp(6rem, 18vw, 14rem)", lineHeight: 0.9 }}
+        >
           4<span className="text-primary">0</span>4
         </h1>
         <p className="text-muted-foreground text-lg mb-10">

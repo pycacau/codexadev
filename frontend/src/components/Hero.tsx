@@ -11,12 +11,12 @@ export const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden grain"
+      className="relative pt-28 md:pt-32 lg:pt-36 pb-16 md:pb-24 overflow-hidden grain"
       data-testid="hero-section"
     >
       {/* Subtle radial glow — single, anchored top-right */}
       <div
-        className="absolute top-0 right-0 w-[50rem] h-[50rem] -translate-y-1/3 translate-x-1/4 rounded-full opacity-[0.12] pointer-events-none"
+        className="absolute top-0 right-0 w-[40rem] h-[40rem] -translate-y-1/3 translate-x-1/4 rounded-full opacity-[0.12] pointer-events-none"
         style={{
           background:
             "radial-gradient(circle at center, hsl(336 85% 55%) 0%, transparent 60%)",
@@ -25,7 +25,7 @@ export const Hero = () => {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         {/* Top meta bar */}
-        <div className="flex items-center justify-between mb-14 md:mb-20">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-10 md:mb-16">
           <span className="eyebrow">Estúdio de desenvolvimento · Fortaleza / CE</span>
           <span className="hidden md:inline-flex items-center gap-2 mono text-[11px] text-muted-foreground">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -34,9 +34,9 @@ export const Hero = () => {
         </div>
 
         {/* Editorial headline grid */}
-        <div className="grid grid-cols-12 gap-y-10 md:gap-y-0 md:gap-x-10 items-end">
-          <div className="col-span-12 lg:col-span-9">
-            <h1 className="display text-[56px] sm:text-[72px] md:text-[96px] lg:text-[120px] text-balance">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-y-0 md:gap-x-8 lg:gap-x-10 items-end">
+          <div className="col-span-12 lg:col-span-8 xl:col-span-9">
+            <h1 className="display-fluid-hero text-balance">
               Software que{" "}
               <span className="italic font-normal text-muted-foreground">funciona</span>
               <span className="text-primary">.</span>
@@ -47,13 +47,13 @@ export const Hero = () => {
             </h1>
           </div>
 
-          <div className="col-span-12 lg:col-span-3 lg:pb-6">
+          <div className="col-span-12 lg:col-span-4 xl:col-span-3 lg:pb-4">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-pretty max-w-md">
               Sites, e-commerce e sistemas sob medida para empresas que
               exigem performance e marca consistente.
             </p>
 
-            <div className="flex items-center gap-3 mt-8">
+            <div className="flex flex-wrap items-center gap-3 mt-6 md:mt-8">
               <a
                 href="#orcamento"
                 className="btn-primary"
@@ -77,21 +77,28 @@ export const Hero = () => {
         </div>
 
         {/* Bottom stats row */}
-        <div className="mt-20 md:mt-28 border-t border-border">
+        <div className="mt-16 md:mt-20 lg:mt-24 border-t border-border">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {stats.map((s, i) => (
               <div
                 key={i}
-                className={`py-8 md:py-10 ${
-                  i > 0 ? "md:border-l border-border" : ""
-                } ${i % 2 === 1 ? "border-l md:border-l border-border" : ""} ${
-                  i < 2 ? "border-b md:border-b-0 border-border" : ""
-                } px-5 md:px-8`}
+                className={[
+                  "py-7 md:py-9 px-5 md:px-7",
+                  // vertical separators between columns
+                  i % 2 === 1 ? "border-l border-border" : "",
+                  "md:border-l md:border-border",
+                  i === 0 ? "md:border-l-0" : "",
+                  // horizontal separator between the two mobile rows
+                  i >= 2 ? "border-t border-border md:border-t-0" : "",
+                ].join(" ")}
               >
-                <div className="font-heading font-semibold text-4xl md:text-5xl tracking-tight text-foreground">
+                <div
+                  className="font-heading font-semibold tracking-tight text-foreground"
+                  style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)" }}
+                >
                   {s.value}
                 </div>
-                <div className="mono text-[11px] tracking-wider uppercase text-muted-foreground mt-3">
+                <div className="mono text-[10px] md:text-[11px] tracking-wider uppercase text-muted-foreground mt-2.5">
                   {s.label}
                 </div>
               </div>

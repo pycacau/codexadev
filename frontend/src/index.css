@@ -116,6 +116,33 @@
     line-height: 0.95;
   }
 
+  /* Fluid display — scales smoothly between mobile and ultrawide */
+  .display-fluid-hero {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-weight: 600;
+    font-variation-settings: 'wdth' 95;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+    font-size: clamp(2.5rem, 8vw, 7rem);
+  }
+
+  .display-fluid-section {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  .display-fluid-footer {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-weight: 600;
+    font-variation-settings: 'wdth' 95;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-size: clamp(2.25rem, 6vw, 5rem);
+  }
+
   /* Subtle frame card (no glass) */
   .frame {
     @apply relative border border-border bg-card;
@@ -158,12 +185,13 @@
 
   /* Section heading rhythm */
   .section {
-    @apply py-24 md:py-32 relative;
+    @apply py-20 md:py-28 lg:py-32 relative;
   }
 
   .section-title {
     font-family: 'Bricolage Grotesque', system-ui, sans-serif;
-    @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.02];
+    @apply font-semibold tracking-tight leading-[1.02];
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
   }
 
   /* Thin rule */
